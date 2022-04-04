@@ -1,8 +1,8 @@
 ---
 title: "Apresentação da disciplina"
-subtitle: "Conhecendo o R"  
+subtitle: "Introdução à análise de dados e conhecendo o R"  
 author: 
-  - "Renata Oliveira e Lucélia Vaz"
+  - "Renata Oliveira"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -162,6 +162,22 @@ Segundo o criador da linguagem:
 > John Gruber
 
 ---
+
+class: inverse, middle
+
+# Por que markdown?
+
+
+Algo que... você possa escrever em **texto simples**
+
+Algo que... seja **legível por pessoas**
+
+Algo que... permita a **formatação**
+
+Algo que... seja possível construir para algo **bonito**
+
+---
+
 ## Rmarkdown
 
 Vou colocar aqui algumas informações-chave sobre a construção geral de informações a partir do uso do RMarkdown. Entretanto, informações adicionais podem ser obtidas de maneira detalhada no site: 
@@ -199,6 +215,12 @@ Na [galeria do RStudio](https://rmarkdown.rstudio.com/gallery.html) diferentes e
 
 ---
 
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="60%"}
+knitr::include_graphics("https://retaoliveira.github.io/relements/figures/allison_horst/knitr.png")
+```
+
+---
+
 ## RPubs
 
 
@@ -212,6 +234,20 @@ Uma vez terminado e clicando no botão `Continue` na parte inferior, você irá 
 
 Você pode optar por atualizar seu conteúdo.
 
+
+---
+
+.pull-left[
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="50%"}
+knitr::include_graphics("https://retaoliveira.github.io/relements/figures/allison_horst/html.png")
+```
+]
+
+.pull-right[
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="50%"}
+knitr::include_graphics("https://retaoliveira.github.io/relements/figures/allison_horst/toc.png")
+```
+]
 
 ---
 
@@ -231,16 +267,24 @@ class: inverse, center, middle
 
 # Faça o seu primeiro documento em RMarkdown!
 
-1. Instale o pacote `knitr` (use a interface de instalação do RStudio)
+1. Instale o pacote `knitr` (use a interface de instalação do RStudio)  
+2. Gere o seu primeiro arquivo RMarkdown. Escolha o tipo de arquivo que quer gerar. Crie pelo menos três tipos de documentos .Rmd e tente apropriar o mesmo conteúdo em todos eles. Quais desafios encontrou quanto às diferenças de formação? 
+> Dica 1: use o botão de `knitr`.    
+> Dica 2: você pode criar documentos com diferentes temas de maneira automática usando uma função no cabeçalho `YAML`.   
+Possible themes: default, cerulean, journal, flatly, darkly, readable, spacelab, united, cosmo, lumen, paper, sandstone, simplex, yeti   
+> Dica 3: Table of contents   
 
-2. Gere o seu primeiro arquivo RMarkdown. Escolha o tipo de arquivo que quer gerar
+3. Clique no botão de `knitr` a cada documento que será salvo no seu computador como `.Rmd` . 
 
-3. Altere o `YAML` mudando o nome do projeto, data, autores. 
+---
 
-4. Clique no botão de `knitr`. 
+class: center, middle
 
-Aprecie o seu primeiro documento! 
+# Aprecie seus primeiros documentos! 
 
+.center[
+### DESAFIO: Tente publicá-los no RPubs!
+]
 
 
 ---
@@ -320,6 +364,20 @@ class: inverse, center, middle
 - `70%-79%` - **Esforço para aprovação**. O estudante tem uma má compreensão dos conceitos em diversas áreas, tem alguma dificuldade em juntar resultados em um argumento convincente, e a comunicação dos resultados às vezes não é clara.
 - `60%-69%` - **Esforço limítrofe**. O estudante está fazendo algum esforço, mas tem uma má compreensão de muitos conceitos e é incapaz de montar um argumento convincente. A comunicação dos resultados não é clara.
 - `Abaixo de 60%` - O estudante não está fazendo um esforço suficiente.
+
+---
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="90%"}
+knitr::include_graphics("https://retaoliveira.github.io/relements/figures/allison_horst/monster_support.jpg")
+```
+
+---
+# Conhecendo R como ferramenta estatística e computacional
+
+## Lab 1
+
+[Link](https://cefetmgbr-my.sharepoint.com/:u:/g/personal/renataoliveira_cefetmg_br/EdTjtwRl5F5DjFDlgrOB6BgB4fqdODik9Jkp0cA_sB696Q?e=jdqlwW)
 
 ---
 
