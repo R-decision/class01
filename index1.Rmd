@@ -1,0 +1,511 @@
+---
+title: "Apresentação da disciplina"
+subtitle: "Conhecendo o R"  
+author: 
+  - "Renata Oliveira e Lucélia Vaz"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["xaringan-themer.css", "slides.css"]
+    nature:
+      ratio: "16:9"
+      highlightLines: true
+      highlightStyle: solarized-light
+      countIncrementalSlides: false
+      slideNumberFormat: |
+         <div class="progress-bar-container">
+           <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+           </div>
+         </div>
+---
+
+
+
+```{r child = "setup.Rmd"}
+```
+
+```{r xaringan-tile-view, echo=FALSE}
+xaringanExtra::use_tile_view()
+```
+
+```{r xaringan-editable, echo=FALSE}
+xaringanExtra::use_editable(expires = 1)
+```
+
+```{r xaringan-panelset, echo=FALSE, message=FALSE, warning=FALSE}
+xaringanExtra::use_panelset()
+xaringanExtra::style_panelset_tabs(panel_tab_font_family = "sans-serif")
+```
+
+```{r xaringanExtra-clipboard, echo=FALSE}
+htmltools::tagList(
+  xaringanExtra::use_clipboard(
+    button_text = "<i class=\"fa fa-clipboard\"></i>",
+    success_text = "<i class=\"fa fa-check\" style=\"color: #90BE6D\"></i>",
+    error_text = "<i class=\"fa fa-times-circle\" style=\"color: #F94144\"></i>"
+  ),
+  rmarkdown::html_dependency_font_awesome()
+)
+```
+
+```{r xaringan-fit-screen, echo=FALSE}
+xaringanExtra::use_fit_screen()
+```
+
+```{r xaringan-extra-styles, echo=FALSE}
+xaringanExtra::use_extra_styles(
+  hover_code_line = TRUE,         #<<
+  mute_unhighlighted_code = TRUE  #<<
+)
+```
+
+```{r xaringan-scribble, echo=FALSE}
+xaringanExtra::use_scribble()
+```
+
+## Análise de dados com R
+
++ Vamos explorar conceitos, fundamentos e desenvolver habilidades de `análise de dados` para `suporte à tomada de decisão`. 
+
++ FOCO nas informações mais importantes sobre o comportamento de seus clientes, clientes potenciais, externalidades, bem estar organizacional dentre outras dimensões. 
+
++ Dados x Informações 
+
+---
+
+## Modelo conceitual da análise de dados
+
+![Modelo de Data Science](https://retaoliveira.github.io/relements/figures/dataR.png)
+
+---
+
+## Modelo conceitual da análise de dados
+
+![Data Science in a Box](https://retaoliveira.github.io/relements/figures/dsbox-ds.png)
+
+---
+
+## Data Wrangling
+
+![Modelo de Data Science](https://retaoliveira.github.io/relements/figures/data_cowboy.png)
+
+---
+
+## Análise de dados serve para que?
+
++ Caracterização dos fenômenos e descrição dos problemas
+
++ Diagnóstico
+
++ Modelagem preditiva
+
++ Comunicação e processo decisório
+
+
+---
+class: inverse, center, middle
+
+# Sairemos deste curso com mais perguntas do que respostas! 
+
+
+---
+class: inverse, center, middle
+
+## O que é o R?
+
+---
+
+## Conhecendo o R
+
+### Interface e funcionalidades
+
+Para uso do R no ambiente RStudio, é inicialmente necessário entender o seu funcionamento. O R é uma linguagem de programação, em plataforma open source, desenvolvida para análise de dados. SEJAM BEM VINDOS!
+
+```{r, 1, out.width = '30%', fig.align = "center", echo=FALSE}
+knitr::include_graphics("https://retaoliveira.github.io/relements/figures/welcome_to_rstats_twitter.png")
+```
+
+---
+
+### Interface e funcionalidades
+
+Em um primeiro momento, o conjunto R + RStudio parece pouco amigável, mas com o tempo, é impossível não apaixonar-se pelas infinitas possibilidades que temos ao utilizar o R.
+
+```{r, 2,  out.width = '30%', fig.align = "center", echo=FALSE}
+knitr::include_graphics("https://retaoliveira.github.io/relements/figures/r_first_then.png")
+```
+
+---
+
+### Interface e funcionalidades
+
+A comunidade do R é bastante ampla e colaborativa. Assim: BUSQUE AJUDA!!!!!
+
+```{r, 3,  out.width = '50%', fig.align = "center", echo=FALSE}
+knitr::include_graphics("https://retaoliveira.github.io/relements/figures/code_hero_rstats.png")
+```
+
+---
+
+class: inverse, center, middle
+
+# Documentos reprodutíveis
+
+---
+
+## O que é Markdown?
+
+Segundo o criador da linguagem:
+
+> Markdown is a text-to-HTML conversion tool for web writers. Markdown allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML).
+>
+> John Gruber
+
+---
+## Rmarkdown
+
+Vou colocar aqui algumas informações-chave sobre a construção geral de informações a partir do uso do RMarkdown. Entretanto, informações adicionais podem ser obtidas de maneira detalhada no site: 
+
++ [Documentos dinâmicos no R by Fernando Mayer & Walmes Zeviani](http://cursos.leg.ufpr.br/prr/capDocDin.html)
+
+
+---
+
+### Seções e subseções
+
+Para demarcar seções e subseções, utilize os `hashtags`. 
+
+### Listas e ordenação
+
+Basta enumerar:
+
+1. Item 1
+2. Item 2
+
+---
+![Figura 1: RMarkdown](https://retaoliveira.github.io/relements/figures/rmarkdown_rockstar.png)
+
+
+--- 
+
+
+## `YAML` (Yet Another Markup Language)
+
+No `YAML`, os dados são escritos em forma de lista aninhada. Os metadados em `YAML` são colocados sempre no início de um documento, e são delimitados por `---`. 
+
+`knitr`
+
+Na [galeria do RStudio](https://rmarkdown.rstudio.com/gallery.html) diferentes estruturas de informação produzida por meio de `RMarkdown` podem ser encontradas! 
+
+---
+
+## RPubs
+
+
+No RStudio, crie um novo documento `R Markdown` escolhendo `Arquivo | Novo | R Markdown`.
+Clique no botão `Knit HTML` na barra de ferramentas do doc para visualizar seu documento.
+Na janela de pré-visualização, clique no botão `Publicar`.
+
+É um processo em duas etapas. Na primeira etapa, você precisa registrar uma conta `RPubs` ou fazer o login, caso já tenha uma. Você escreve o título de seu documento e dá uma breve descrição (para que outros possam encontrar seu trabalho a partir da busca). 
+
+Uma vez terminado e clicando no botão `Continue` na parte inferior, você irá diretamente para o artigo publicado. 
+
+Você pode optar por atualizar seu conteúdo.
+
+
+---
+
+## Variáveis, funções e *packages* 
+
+Sua estrutura fundamenta-se em uma grande variedade de ferramentas quantitativas, organizadas por meio de **objetos**, **funções** e **packages**. A instalação `base` do R já contempla uma série de funções e *packages*. *Packages* adicionais podem ser instalados quando for necessário ou interessante. Para instalação de *packages*, utiliza-se a função `install.packages()`.
+
+---
+
+class: inverse, center, middle
+
+## Sua vez!!!!!!
+
+## 5 MINUTOS!
+
+---
+
+# Faça o seu primeiro documento em RMarkdown!
+
+1. Instale o pacote `knitr` (use a interface de instalação do RStudio)
+
+2. Gere o seu primeiro arquivo RMarkdown. Escolha o tipo de arquivo que quer gerar
+
+3. Altere o `YAML` mudando o nome do projeto, data, autores. 
+
+4. Clique no botão de `knitr`. 
+
+Aprecie o seu primeiro documento! 
+
+
+
+---
+class: inverse, center, middle
+
+## Vamos falar sobre o projeto integrador?
+
+---
+
+## O que é o projeto integrador?
+
+Este projeto será desenvolvido ao longo de toda a disciplina e deve ser relacionado com cada unidade de ensino. Seu conteúdo deve ser estruturado seguindo normas cultas de linguagem, clareza em relação ao problema em investigação e aos objetivos propostos. Consideraremos três dimensões para construção do projeto integrador:
+
+- Situações-problemas: a aprendizagem deve ser iniciada com situações reais e do cotidiano. A ideia é criar um olhar investigativo para o mundo e produzir conhecimento pela análise de dados. 
+
+- Conteúdos interdisciplinares e práticos: rompe com as fronteiras tradicionais do conhecimento, ao passo que relaciona disciplinas e até mesmo promove a articulação de áreas. Além disso, a produção de conhecimento do projeto integrador deve ser aplicável em situações reais.
+
+- Trabalho coletivo: desenvolve as habilidades dos alunos para trabalhar em equipe.
+
+---
+
+## Etapas essenciais para desenvolvimento de um projeto de suporte à decisão que contemple análise de dados
+
+1. Definição do problema
+
+2. Coleta de dados
+
+3. Limpeza e transformação de dados
+
+4. Representação dos dados
+
+5. Análise dos dados
+
+6. Modelagem dos dados
+
+7. Otimização e implementação do modelo
+
+8. Comunicação da análise, discussão e resultados
+
+Nesse projeto, em função da natureza da disciplina que tem como objetivo proporcionar aos estudantes competências para realização de análise exploratória de dados, as etapas 6 e 7 não serão exploradas no projeto integrador.
+
+---
+
+## Entregas parciais
+
+As entregas parciais deverão ser realizadas conforme o cronograma a seguir que está alinhado com as etapas apresentadas anteriormente:
+
+| Data | Etapa concluída |
+|------|-----------------|
+|a combinar| Descrição do problema em investigação, hipóteses desenhadas pelo grupo, coleta preliminar de dados e plano de análise dos dados|
+|a combinar|Dados processados (limpeza e transformação) e estrutura do instrumento de comunicação esboçada|
+|a combinar|Representação do problema e dos instrumentos de análise orientada pelos dados|
+|a combinar|Análise e discussão dos resultados e instrumento de comunicação final|
+
+## Parceria com a profa. Ludmila na disciplina TÓPICO ESPECIAL: CINEMA E ADMINISTRAÇÃO: DISCUSSÕES SOBRE TRABALHO, SOCIEDADE E SUBJETIVIDADE
+
+---
+
+## Ideias para desenvolvimento do projeto integrador
+
+1. Análise de Sentimento
+
+2. Análise de dados de Uber ou de dados de mobilidade da Google e da Apple
+
+3. Sistema de Recomendação de Filmes
+
+4. Segmentação de clientes
+
+5. Predição de Preferência de Vinho
+
+6. Análise da adesão ao distanciamento social como medidas não farmacológicas de contenção da difusão do COVID-19
+
+7. Análise do Legislativo Brasileiro
+
+---
+
+## Rubrica de avaliação
+
+.panelset[
+.panel[.panel-name[Onde?]
+
+Embora a presença nos encontros síncronos não seja explicitamente acompanhada, a participação neste curso conta para sua nota. A seguir, são apresentados os critérios considerados para a avaliação do projeto integrador que são úteis para nortear o desenvolvimento do trabalho. Esta atividade será avaliada em `40 pontos`.
+
+> Certifique-se que você está cadastrado ao servidor da disciplina no `Discord`, pois o processo de desenvolvimento do projeto será tão importante quanto seu resultado para a avaliação e eu acompanharei as discussões, análises e resultados por lá. 
+
+]
+
+.panel[.panel-name[Quanto?]
+
+Os `40 pontos` serão distribuídos em: 
+
+|Item|Pontuação
+|----|-----------------
+|Relatório/instrumento de comunicação|25
+|Apresentação do projeto|5
+|Trabalho em equipe - avaliação pelos pares|10
+
+]
+
+.panel[.panel-name[Notas?]
+
+Discriminação geral da pontuação:
+
+- `90%-100% `- **Esforço notável**. O estudante compreende como aplicar os fundamentos considerados na análise, pode argumentar de maneira consistente, pode identificar fraquezas no argumento e pode comunicar claramente os resultados.
+- `80%-89%` - **Bom esforço**. O estudante compreende a maioria dos conceitos, reúne um argumento adequado, identifica alguns pontos fracos de seu argumento e comunica claramente a maioria dos resultados aos outros.
+- `70%-79%` - **Esforço para aprovação**. O estudante tem uma má compreensão dos conceitos em diversas áreas, tem alguma dificuldade em juntar resultados em um argumento convincente, e a comunicação dos resultados às vezes não é clara.
+- `60%-69%` - **Esforço limítrofe**. O estudante está fazendo algum esforço, mas tem uma má compreensão de muitos conceitos e é incapaz de montar um argumento convincente. A comunicação dos resultados não é clara.
+- `Abaixo de 60%` - O estudante não está fazendo um esforço suficiente.
+]
+]
+---
+
+## Relatório/Instrumento de comunicação
+
+.panelset[
+.panel[.panel-name[Problema]
+
+##### 1. Caracterização do problema em análise (5 pontos)
+|Item|Pontuação
+|----|-----------------
+|Relevância do problema para o contexto do processo decisório|1
+|Necessidade de investigação orientada por dados para suporte ao processo decisório|1
+|Pertinência das hipóteses geradas|1
+|Consistência do objetivo geral proposto|2
+
+]
+
+.panel[.panel-name[Organização dos dados]
+
+
+##### 2. Organização, limpeza e transformação dos dados (5 pontos)
+
+|Item|Pontuação
+|----|-----------------
+|Escolha das fontes para coleta de dados|2
+|Escolha e implementação dos instrumentos para organização e limpeza dos dados|1
+|Organização final dos dados |1
+|Escolha e implementação das variáveis e indicadores para análise|1
+
+]
+
+.panel[.panel-name[Representação dos dados]
+
+##### 3. Representação dos dados para suporte à decisão (5 pontos)
+
+|Item|Pontuação
+|----|-----------------
+|Escolha e implementação dos instrumentos de visualização|1
+|Reprodutibilidade da visualização|2
+|Capacidade de representação do fenômeno ou processo em análise|1
+
+]
+.panel[.panel-name[Reprodutibilidade]
+
+##### 4. Instrumento de comunicação RMarkdown (5 pontos)
+
+|Item|Pontuação
+|----|-----------------
+|Formalidade textual|1
+|Conteúdo do instrumento representa o desenvolvimento do trabalho|1
+|O instrumento é objetivo quanto à caracterização do problema|1
+|Reprodutibilidade do instrumento de comunicação|1
+|Adequação dos instrumentos de comunicação ao público-alvo|1
+
+]
+
+.panel[.panel-name[Resultados]
+
+##### 5. Resultados e discussões (5 pontos)
+
+|Item|Pontuação
+|----|-----------------
+|Interpretação das condicionantes dos problemas em investigação|1
+|Discussão dos dados em relação às hipóteses inicialmente determinadas|1
+|Discussão de preceitos éticos do uso de dados no contexto do trabalho|1
+|Discussão das implicações no curto, médio e longo prazos para a sociedade|1
+|Criatividade e pensamento crítico|1
+
+]
+]
+
+---
+## Apresentação do projeto (5 pontos)
+
+.panelset[
+.panel[.panel-name[Como?]
+
+10 minutos no máximo, e cada membro da equipe deve dizer algo substancial. Você pode apresentar ao vivo durante o encontro ou pré-gravar e enviar seu vídeo para ser reproduzido durante o encontro.
+
+Prepare um `slide deck` usando o pacote chamado `xaringan` e sintaxe R Markdown. Não há um limite para quantos slides você pode usar, apenas um limite de tempo (10 minutos no total). Cada membro da equipe deve ter a oportunidade de falar durante a apresentação. Sua apresentação não deve ser apenas um relato de tudo o que você tentou ("então fizemos isto, depois fizemos isto, etc."), mas deve transmitir **quais escolhas você fez, e por quê, e o que você encontrou**.
+
+]
+
+.panel[.panel-name[Quanto?]
+
+O esquema de notas (rubrica) para a apresentação é o seguinte:
+
+|Item|Pontuação
+|----|-----------------
+|Gerenciamento de tempo: A equipe dividiu bem o tempo entre si ou foi cortada ao longo do tempo?	|1
+|Conteúdo: A questão da pesquisa está bem projetada e os dados estão sendo usados de forma relevante para a questão da pesquisa?|1
+|Profissionalismo: Até que ponto a equipe se apresentou bem? A apresentação parece ter sido bem praticada? Todos tiveram a oportunidade de dizer algo significativo sobre o projeto?|1
+|Trabalho em equipe: A equipe apresentou uma história unificada, ou pareceu um trabalho independente remendado em conjunto?|1
+|Slides: Os slides são bem organizados, legíveis, não estão cheios de texto, apresentando figuras com etiquetas legíveis, lendas, etc.?|1
+
+]
+]
+---
+
+## Trabalho em equipe - avaliação pelos pares (10 pontos)
+
+Você deverá preencher uma pesquisa onde avaliará a contribuição e o trabalho em equipe de cada membro da **SUA** equipe em `10 pontos`. 
+
+Além disso, você informará um percentual de contribuição para cada membro da equipe. O preenchimento desse formulário é um pré-requisito para obtenção de crédito na avaliação do membro da equipe. Se você estiver sugerindo que um indivíduo fez menos de 20% do trabalho, por favor, dê alguma explicação. 
+
+Se qualquer indivíduo obtiver uma pontuação média de colegas indicando que fez menos de 10% do trabalho, essa pessoa receberá `metade da nota do resto do grupo.`
+
+
+---
+
+class: inverse, center, middle
+
+## Quem comporá cada grupo de trabalho?
+
+---
+
+class: center, middle
+
+# Projetos incrementais
+
+---
+
+# Encaminhamentos:
+
+1. Tutorial de R - Swirl
+2. Atividade no SIGAA
+3. Projeto incremental 1
+4. Projeto integrador
+
+.center[
+# ENGAJAMENTO!
+]
+---
+class: inverse, center, middle
+
+# DÚVIDAS?
+
+
+
+---
+
+class:  center, middle
+
+## Para a próxima semana...
+
+---
+
+## Para a próxima semana...
+
+Atividades 1 concluída.
+
+Laboratório 1 concluído. 
+
+---
+
+class: inverse, center, middle
+
+# DÚVIDAS?
