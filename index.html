@@ -5,13 +5,13 @@
     <meta charset="utf-8" />
     <meta name="author" content="Renata Oliveira" />
     <script src="libs/header-attrs/header-attrs.js"></script>
-    <link href="libs/font-awesome/css/all.css" rel="stylesheet" />
-    <link href="libs/font-awesome/css/v4-shims.css" rel="stylesheet" />
+    <link href="libs/font-awesome/css/all.min.css" rel="stylesheet" />
+    <link href="libs/font-awesome/css/v4-shims.min.css" rel="stylesheet" />
     <link href="libs/panelset/panelset.css" rel="stylesheet" />
     <script src="libs/panelset/panelset.js"></script>
     <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
     <script src="libs/tile-view/tile-view.js"></script>
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xe45927f9dae4a65b2193e2ce82978bf","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"fce87cf648f14654b092c6aa52828550","expires":1}</script>
     <script src="libs/himalaya/himalaya.js"></script>
     <script src="libs/js-cookie/js.cookie.js"></script>
     <link href="libs/editable/editable.css" rel="stylesheet" />
@@ -33,9 +33,15 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
+.title[
 # Apresentação da disciplina
+]
+.subtitle[
 ## Introdução à análise de dados e conhecendo o R
+]
+.author[
 ### Renata Oliveira
+]
 
 ---
 
@@ -69,15 +75,35 @@ layout: true
 
 
 
-## Análise de dados com R
 
+# Análise de dados aplicada ao Processo Decisório
+.midi[
 + Vamos explorar conceitos, fundamentos e desenvolver habilidades de `análise de dados` para `suporte à tomada de decisão`. 
 
 + FOCO nas informações mais importantes sobre o comportamento de seus clientes, clientes potenciais, externalidades, bem estar organizacional dentre outras dimensões. 
 
 + Dados x Informações 
 
+
++ Big data - combinação de dados caracterizados por volume, variedade e velocidade em que são processados. 
+
++ Small data - análise de um conjunto de dados com um volume e um formato reduzido que fazem com que esses sejam acessíveis, processáveis e compreensíveis. 
+
++ Wide data - análise dos registros por meio da sinergia de diversas fontes de dados (pequenas ou grandes) não-estruturados e estruturados.
+]
+
+
+
 ---
+
+## Ciência de dados
+
+&lt;img src="https://retaoliveira.github.io/relements/figures/CienciaDeDados.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+
 
 ## Modelo conceitual da análise de dados
 
@@ -93,7 +119,7 @@ layout: true
 
 ## Data Wrangling
 
-![Modelo de Data Science](https://retaoliveira.github.io/relements/figures/data_cowboy.png)
+&lt;img src="https://retaoliveira.github.io/relements/figures/data_cowboy.png" width="80%" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -113,11 +139,10 @@ class: inverse, center, middle
 
 # Sairemos deste curso com mais perguntas do que respostas! 
 
-
 ---
 class: inverse, center, middle
 
-## O que é o R?
+# O que é o R?
 
 ---
 
@@ -251,11 +276,28 @@ Sua estrutura fundamenta-se em uma grande variedade de ferramentas quantitativas
 
 ---
 
+
 class: inverse, center, middle
 
-## Sua vez!!!!!!
+# Sua vez!!!!!!
 
 ## 5 MINUTOS!
+
+---
+
+# Abra e rode um documento em RMarkdown!
+
+1. Salve o [arquivo](https://cefetmgbr-my.sharepoint.com/:u:/g/personal/renataoliveira_cefetmg_br/ESP5b0WfqYJFplhjSRiciG0BNKQZnv2HzbHnPBxZEBr3Ew?e=gVcWCQ) em um diretório que você consiga acessar depois. Sugiro criar um diretório para essa finalidade. 
+
+2. Abra o arquivo no RStudio: `File | Open File` e navegue até o arquivo `01-covid.Rmd` selecionando-o. 
+
+3. Você identificará o arquivo por meio do `YAML` com `title: "Mortes por COVID-19"`
+
+4. Verifique se houve alguma mensagem abaixo da barra de ferramentas da janela de edição do `RMarkdown` para que sejam instalados `packages` necessários para rodar esse `.Rmd`
+
+4. Clique no botão de `knitr`. 
+
+Aprecie o documento! 
 
 ---
 
@@ -313,25 +355,6 @@ Nesse projeto, em função da natureza da disciplina que tem como objetivo propo
 
 ---
 
-## Entregas parciais
-
-As entregas parciais deverão ser realizadas conforme o cronograma a seguir que está alinhado com as etapas apresentadas anteriormente:
-
-| Data | Etapa concluída |
-|------|-----------------|
-|a combinar| Descrição do problema em investigação, hipóteses desenhadas pelo grupo, coleta preliminar de dados e plano de análise dos dados|
-|a combinar|Dados processados (limpeza e transformação) e estrutura do instrumento de comunicação esboçada|
-|a combinar|Representação do problema e dos instrumentos de análise orientada pelos dados|
-|a combinar|Análise e discussão dos resultados e instrumento de comunicação final|
-
----
-
-class: inverse, center, middle
-
-## Parceria com a profa. Ludmila na disciplina TÓPICO ESPECIAL: CINEMA E ADMINISTRAÇÃO: DISCUSSÕES SOBRE TRABALHO, SOCIEDADE E SUBJETIVIDADE
-
----
-
 ## Ideias para desenvolvimento do projeto integrador
 
 1. Análise de Sentimento
@@ -360,25 +383,7 @@ class: inverse, center, middle
 - `Abaixo de 60%` - O estudante não está fazendo um esforço suficiente.
 
 ---
-
-
-&lt;img src="https://retaoliveira.github.io/relements/figures/allison_horst/monster_support.jpg" width="90%" style="display: block; margin: auto;" /&gt;
-
----
-# Conhecendo R como ferramenta estatística e computacional
-
-## Lab 1
-
-[Link](https://cefetmgbr-my.sharepoint.com/:u:/g/personal/renataoliveira_cefetmg_br/EdTjtwRl5F5DjFDlgrOB6BgB4fqdODik9Jkp0cA_sB696Q?e=jdqlwW)
-
----
-
-# Encaminhamentos:
-
-1. Tutorial de R - Swirl
-2. Atividade 1
-3. Lab 1
-4. Definição do tema do Projeto integrador
+class: middle, center
 
 .center[
 # ENGAJAMENTO!
@@ -437,6 +442,19 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
 (function() {
   "use strict"
   // Replace <script> tags in slides area to make them executable

@@ -63,15 +63,37 @@ xaringanExtra::use_extra_styles(
 xaringanExtra::use_scribble()
 ```
 
-## Análise de dados com R
 
+# Análise de dados aplicada ao Processo Decisório
+.midi[
 + Vamos explorar conceitos, fundamentos e desenvolver habilidades de `análise de dados` para `suporte à tomada de decisão`. 
 
 + FOCO nas informações mais importantes sobre o comportamento de seus clientes, clientes potenciais, externalidades, bem estar organizacional dentre outras dimensões. 
 
 + Dados x Informações 
 
+
++ Big data - combinação de dados caracterizados por volume, variedade e velocidade em que são processados. 
+
++ Small data - análise de um conjunto de dados com um volume e um formato reduzido que fazem com que esses sejam acessíveis, processáveis e compreensíveis. 
+
++ Wide data - análise dos registros por meio da sinergia de diversas fontes de dados (pequenas ou grandes) não-estruturados e estruturados.
+]
+
+
+
 ---
+
+## Ciência de dados
+
+```{r, out.width = '100%', fig.align = "center", echo=FALSE}
+knitr::include_graphics("https://retaoliveira.github.io/relements/figures/CienciaDeDados.png")
+```
+
+
+---
+
+
 
 ## Modelo conceitual da análise de dados
 
@@ -87,7 +109,9 @@ xaringanExtra::use_scribble()
 
 ## Data Wrangling
 
-![Modelo de Data Science](https://retaoliveira.github.io/relements/figures/data_cowboy.png)
+```{r, out.width = '80%', fig.align = "center", echo=FALSE}
+knitr::include_graphics("https://retaoliveira.github.io/relements/figures/data_cowboy.png")
+```
 
 ---
 
@@ -107,11 +131,10 @@ class: inverse, center, middle
 
 # Sairemos deste curso com mais perguntas do que respostas! 
 
-
 ---
 class: inverse, center, middle
 
-## O que é o R?
+# O que é o R?
 
 ---
 
@@ -257,11 +280,28 @@ Sua estrutura fundamenta-se em uma grande variedade de ferramentas quantitativas
 
 ---
 
+
 class: inverse, center, middle
 
-## Sua vez!!!!!!
+# Sua vez!!!!!!
 
 ## 5 MINUTOS!
+
+---
+
+# Abra e rode um documento em RMarkdown!
+
+1. Salve o [arquivo](https://cefetmgbr-my.sharepoint.com/:u:/g/personal/renataoliveira_cefetmg_br/ESP5b0WfqYJFplhjSRiciG0BNKQZnv2HzbHnPBxZEBr3Ew?e=gVcWCQ) em um diretório que você consiga acessar depois. Sugiro criar um diretório para essa finalidade. 
+
+2. Abra o arquivo no RStudio: `File | Open File` e navegue até o arquivo `01-covid.Rmd` selecionando-o. 
+
+3. Você identificará o arquivo por meio do `YAML` com `title: "Mortes por COVID-19"`
+
+4. Verifique se houve alguma mensagem abaixo da barra de ferramentas da janela de edição do `RMarkdown` para que sejam instalados `packages` necessários para rodar esse `.Rmd`
+
+4. Clique no botão de `knitr`. 
+
+Aprecie o documento! 
 
 ---
 
@@ -319,25 +359,6 @@ Nesse projeto, em função da natureza da disciplina que tem como objetivo propo
 
 ---
 
-## Entregas parciais
-
-As entregas parciais deverão ser realizadas conforme o cronograma a seguir que está alinhado com as etapas apresentadas anteriormente:
-
-| Data | Etapa concluída |
-|------|-----------------|
-|a combinar| Descrição do problema em investigação, hipóteses desenhadas pelo grupo, coleta preliminar de dados e plano de análise dos dados|
-|a combinar|Dados processados (limpeza e transformação) e estrutura do instrumento de comunicação esboçada|
-|a combinar|Representação do problema e dos instrumentos de análise orientada pelos dados|
-|a combinar|Análise e discussão dos resultados e instrumento de comunicação final|
-
----
-
-class: inverse, center, middle
-
-## Parceria com a profa. Ludmila na disciplina TÓPICO ESPECIAL: CINEMA E ADMINISTRAÇÃO: DISCUSSÕES SOBRE TRABALHO, SOCIEDADE E SUBJETIVIDADE
-
----
-
 ## Ideias para desenvolvimento do projeto integrador
 
 1. Análise de Sentimento
@@ -366,27 +387,7 @@ class: inverse, center, middle
 - `Abaixo de 60%` - O estudante não está fazendo um esforço suficiente.
 
 ---
-
-
-```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="90%"}
-knitr::include_graphics("https://retaoliveira.github.io/relements/figures/allison_horst/monster_support.jpg")
-```
-
----
-# Conhecendo R como ferramenta estatística e computacional
-
-## Lab 1
-
-[Link](https://cefetmgbr-my.sharepoint.com/:u:/g/personal/renataoliveira_cefetmg_br/EdTjtwRl5F5DjFDlgrOB6BgB4fqdODik9Jkp0cA_sB696Q?e=jdqlwW)
-
----
-
-# Encaminhamentos:
-
-1. Tutorial de R - Swirl
-2. Atividade 1
-3. Lab 1
-4. Definição do tema do Projeto integrador
+class: middle, center
 
 .center[
 # ENGAJAMENTO!
